@@ -1,0 +1,344 @@
+/*@import url('https://fonts.googleapis.com/css?family=Exo+2');*/
+
+body{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	/*font-family: 'Exo 2', sans-serif;*/
+}
+
+a{
+	cursor: pointer;
+}
+
+.main{
+	display: flex;
+}
+
+.left_panel{
+	flex: 1;
+	width: 30%;
+	/*background-color: #e2edff;*/
+	/*font-family: 'Exo 2', sans-serif;*/
+	background-color: white;
+}
+
+.right_panel{
+	width: 70%;
+}
+
+.calendar_header{
+	display: flex;
+	width: 100%;
+	background-color: yellow;
+	box-sizing: border-box;
+	padding: 10px;
+}
+
+.calendar_header_left{
+	flex: 1;
+}
+
+.calendar_header_left, .calendar_header_right{
+
+	text-align:center; 
+	width: 10%;
+}
+
+.calendar_header_center{
+	width: 80%;
+	text-align: center;
+}
+
+.header_btn{
+	text-align: center;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	vertical-align: middle;
+	line-height: 30px;
+	border:2px solid #ccc;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+#month ,h4{
+	margin: 0;
+	padding: 0;
+}
+
+table{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+table tr td {
+	border:1px solid black;
+	width:14.28%;
+	height: 80px;
+	vertical-align: top;
+
+}
+
+td:hover{
+	cursor: pointer;
+	background-color: rgba(0,0,0,.1);
+}
+
+
+.empty{
+	background-color: #ccc;
+}
+
+.birth_cell{
+	color:green;
+	font-weight: bold;
+}
+
+.selected_cell{
+	background-color: red;
+}
+
+.today{
+	background-color: rgba(0,255,0,0.1);
+	border
+}
+
+.display_inline {
+	display: inline-block;
+}
+
+.edit input{
+	display: block;
+}
+
+
+
+.upcoming,.edit,.selected_day{
+	margin-bottom:5px;
+}
+
+
+
+.upcoming_title, .edit_title, .selected_day_title{
+	padding-bottom: 5px;
+	background-color: #82C0FE;
+	display: flex;
+	align-items: center;
+
+}
+
+.right_text{
+	flex:1;
+	text-align: right;
+	margin-right: 5px;
+
+}
+
+.left_panel h2{
+	margin: 0;
+	padding: 0;
+	margin-left:2px;
+}
+
+.left_panel h4{
+	margin-left: 5px;
+}
+
+.left_panel a {
+	margin: 0;
+	padding: 0;
+	
+}
+
+.person{
+	cursor:pointer;
+	vertical-align: bottom;
+	text-decoration: underline;
+	color: #395139;
+}
+
+.right_float{
+	text-align: right;
+	width:50%;
+}
+
+
+ul {
+	padding-left :20px;
+	margin: 0;
+	list-style: none;
+	margin-top:5px;
+	margin-bottom: 5px;
+}
+
+ul li {
+	margin-bottom: 2px;
+}
+
+.underline_block{
+	border-bottom:2px solid #ccc;
+}
+
+.add_to_day{
+	display: flex;
+	padding-top: 5px; 
+}
+
+.input_panel{
+	flex: 1;
+	width: 50%;
+	box-sizing: border-box;
+	padding-left: 5px;
+}
+
+.input_panel input{
+	border:none;
+	border-bottom: 2px solid #73CC74;
+	border-right: 2px solid #73CC74;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 5px;
+	background-color: rgba(190, 255, 230, 0.32);
+}
+
+.input_panel input:focus{
+	border-bottom: 2px solid #335633;
+}
+
+
+.save_panel{
+	width: 50%;
+	text-align: left;
+	height: 60px;
+	box-sizing: border-box;
+
+}
+
+.save_panel a {
+	display: block;
+	padding: 18px;
+	width: 50px;
+	background-color: #73CC74;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	text-align: center;
+	cursor:pointer;
+}
+
+.save_panel a:hover{
+	box-shadow: inset 0 0 10px rgba(0,0,0,.3);
+}
+
+
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+
+.profile{
+	display: flex;
+}
+
+#profile_date{
+	font-size: 0.7rem;
+	;
+}
+
+#profile_name {
+	font-size: 1.1rem;
+}
+
+.profile_btns{
+	margin-top: 5px;
+}
+
+.profile_btns a{
+	display: block;
+	text-decoration: none;
+	border:1px solid #004D99;
+	text-align: center;
+	margin-bottom: 2px;
+	color:black;
+}
+
+.profile_btns a:hover{
+	color:#004D99;
+	background-color: rgba(0,255,0,0.1);
+}
+
+#del_btn:hover{
+	background-color: rgba(255,0,0,0.1);
+}
+
+.photo {
+	flex: 1;
+	width: 30%;
+}
+
+.info,.edit_info{
+	width: 70%;
+
+	
+}
+
+
+.form{
+	padding: 10px;
+	padding-top:2px;
+	padding-bottom: 2px;
+	background-color: #3E5D7D;
+
+}
+
+.form a{
+	display: inline-block;
+	color:white;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 2px 5px;
+	margin-top:2px;
+	border:2px solid white;
+	border-radius: 5px;
+}
+
+#save_chng:hover{
+	background-color:rgba(0,255,0,.2);
+}
+
+#canc_chng:hover{
+	background-color:rgba(255,0,0,.2);
+}
+
+
+
+.field input , .field label{
+	display: inline-block;
+	
+	box-sizing: border-box;
+	padding: 5px;
+}
+
+.field {
+	margin-bottom: 2px;
+}
+.field input{
+	border:none;
+	width: 60%;
+	height: 30px;
+	vertical-align: middle;
+	
+}
+.field label{
+	width: 40%;
+	font-weight: bold;
+	background-color: #ccc;
+	vertical-align: middle;
+}
+

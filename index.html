@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calendar</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script defer  type="text/javascript" src="script.js"></script>
+</head>
+
+
+<body>
+	<header></header>
+
+	<div class=main>
+		
+
+		<div class="left_panel">
+			
+			<div class="upcoming">
+				<div class="upcoming_title">
+					<div class="display_inline left_text">
+						<h2> Upcoming</h2>
+					</div>
+
+					<div class="display_inline right_text">
+						 <select onclick="loadUpcoming(this.value)">
+						  	<option selected="selected" value="1">1 week</option>
+						  	<option value="2">2 week</option>
+						  	<option value="3">3 week</option>
+						  	<option value="100">month</option>
+						</select> 
+					</div>
+					
+
+				</div> 
+
+				<ul id="upcoming_list">
+
+				</ul>
+			</div>
+
+
+			<div class="selected_day" id="selected_day">
+				<div class="selected_day_title" >
+					<div class="display_inline left_text">
+						<h2 id="selected_day_title"> Upcoming</h2>
+					</div>
+					<div class="display_inline right_text">
+						<a style="display: block" onclick="document.getElementById('selected_day').style.display='none';"> X</a>
+					</div>
+				</div> 
+
+				<div class="day_birdth underline_block">
+					<h4>Today birthdays</h4>
+					<ul id="day_list">
+					</ul>
+				</div>
+				
+
+				<h4>Add birthday to this day</h4>
+				<div class="add_to_day underline_block">
+					<div class="input_panel">
+						<input type="text" placeholder="name" id="day_name">
+						<input  type="number" placeholder=" year of birth" name="" id="day_year" >
+					</div>
+
+					<div class="save_panel">
+						<a onclick="saveNewBirthFromDay(day_name.value,day_year.value)" >Save</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="edit" id="edit" style="display: none">
+				<div class="edit_title" >
+					<div class="display_inline left_text">
+						<h2 id="selected_day_title"> Profile</h2>
+					</div>
+					<div class="display_inline right_text">
+						<a style="display: block" onclick="document.getElementById('edit').style.display='none';"> X</a>
+					</div>
+				</div> 
+
+				<div class="profile">
+					
+					<div class="photo">
+						<img src="images/face.jpg" width="100px" height="100px">
+					</div>
+
+					<div class="info" id="info">
+						<div>
+							<span id="profile_name">Bodya Duck</span><br>
+							<span id ="profile_date">09.11.1995 (22)</span>
+						</div>
+
+						<div class="profile_btns">
+							<a id="edit_btn" onclick="loadEditor()">Edit</a>
+							<a href="" id="del_btn"> Delete prifile</a>
+
+						</div>
+					</div>
+
+					<div class="edit_info" id="edit_info" style="display: none;" >
+						<div class="form">
+							<div class="field">
+								<label for="edit_name">Name</label				
+								><input id="edit_name" value="Bodya Duck" name="edit_name"></input>
+							</div>
+							<div class="field">
+								<label for="edit_date">Date</label				
+								><input id="edit_date" name="edit_date" placeholder="dd::mm"></input>
+							</div>	
+							<div class="field">
+								<label for="edit_year">Year</label				
+								><input id="edit_year" value="Bodya Duck" name="edit_year"></input>
+							</div>		
+							
+							<div>
+								
+								<a id="save_chng">Save</a>
+								<a id="canc_chng" onclick="cancelSaving()">Cancel</a>
+
+							</div>
+
+						</div>
+
+					</div>
+
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="right_panel">
+
+			<div class="Calendar">
+				
+				<div class="calendar_header">
+					
+					<div class="calendar_header_left">
+						<a class="header_btn" id="prev_month" onclick="prevMonth()" > < </a>
+					</div>
+
+					<div class="calendar_header_center">
+					
+							<h3 id="month"></h3>
+							<h4 id="day"></h4>
+					</div>
+
+
+					
+
+					<div class="calendar_header_right">
+						<a class="header_btn" id="next_month" onclick="nextMonth()" >></a>
+					</div>
+				</div>
+
+				<div class="calendar_main">
+					
+					<table id="tbl">
+						
+					</table>
+
+				</div>
+
+				<div class="selected_date">
+					<h3>Today, 19 December</h3>
+					<input type="text" name="name" id="new_name">
+					<input type="number" name="new_year">
+
+				</div>
+
+
+			</div>
+
+
+		</div>
+
+	</div>
+
+
+	<footer></footer>
+</body>
+
+
+</html>
